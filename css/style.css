@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+:root{
+    --primary-bg-color: #1c2833;
+    --second-bg-color: #212f3d;
+    --txt-white: #fff;
+    --primary-color: #28b463;
+    --box-shadow: 5px 5px var(--primary-color);
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+       
+}
+a{
+    color:var(--txt-white);
+
+}
+header{
+    color:var(--txt-white) ;
+    background: var(--second-bg-color);
+    font-size: 1.2rem;
+    min-height: 70vh;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: var(--primary-bg-color);
+    height: 80px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+
+}
+
+nav ul li{
+    padding: 1.5rem 0.5rem;
+    margin: 0 1.4rem;
+    position: relative;
+}
+nav ul li a::after{
+content: '';
+position: absolute;
+left: 0;
+height: 3px;
+background: var(--primary-color);
+width: 0%;
+top: 50px;
+transition:all 0.3s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+
+}
+
+.social-icons a {
+    padding: 0  0.5rem;
+    transition: 0.3s;
+
+}
+.social-icons a:hover{
+    color: #28b463;
+}
+.logo {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+.logo span {
+    font-size: 4rem;
+}
+
+/* NavBar close*/
+
+/* showcase Start */
+
+.content-wrapper{
+ display: flex;
+align-items: center;
+justify-content: space-around;
+height: 84vh;
+width: 105%;
+padding: 0 10%;
+
+}
+.content-left{
+    margin-right:30%;
+    width: 70%;
+}
+
+.content-left .lead{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.txt-content{
+    display: flex;
+    width: 100%;
+}
+
+.normal_txt{
+    font-size: 3.5rem;
+    width: 30%;
+
+
+}
+.change_txt{
+    font-size: 3.5rem;
+    color: #28b463;
+    font-weight: 600;
+    margin-left: -10%;
+    position: relative;
+}
+.txt-content .change_txt::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #fff;
+    /*background: rgba(0,0, 0,1);*/
+    background: var(--second-bg-color);
+    animation: animateTxt 5s steps(25) infinite;
+ }
+
+
+.content-left p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+.content-left button{
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 02px;
+    transition: all 0.5s;
+
+}
+
+.content-left button:hover{
+    background: var(--primary-color);
+    border: none;
+    padding: 1rem 3rem;
+}
+.content-left button:active{
+    transform: scale(0.95);
+}
+/* right content start*/
+.content-right{
+    /*transform: skew(-0.5deg);*/
+    width: 25%;
+    box-shadow: var(--box-shadow);
+    border-radius: 0 5px;
+    background: #fff;
+    margin-top:-50%;
+    margin-left:110%;
+    animation: imgAnimate 5s forwards infinite ;
+    transform: translateX(300%);
+}
+
+
+.content-right img{
+    display: block;
+    min-height: 100%;
+    width: 140%;
+    border-radius: 0 5px;
+    box-shadow: var(--box-shadow);
+}
+
+/* right content close*/
+/* skill start*/
+.skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary-bg-color);
+    color: aliceblue;
+    width: 100%;
+    padding: 0 1px;
+    margin-top: -3%;
+}
+.skills h2{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.skills i{
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+.skills .html{
+    color: #e44f26;
+}
+.skills .css{
+    color: #085dac;
+}
+.skills .js{
+    color: #ffd700;
+}
+.skills .python{
+    color:  #61dafb;
+}
+
+/* skill  close*/
+/* animatio  start*/
+@keyframes imgAnimate {
+    to {
+        transform: translateX(0);
+        transform: skew(-3deg);
+    }
+}
+/* animatio  close*/
+@keyframes animateTxt{
+    3%{
+        left: 0;
+    }
+    30%{
+        left: 100%;
+    }
+    80%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+/* showcase Close */
